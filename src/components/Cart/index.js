@@ -4,6 +4,7 @@ import CartListView from '../CartListView'
 
 import CartContext from '../../context/CartContext'
 import EmptyCartView from '../EmptyCartView'
+import CartSummary from '../CartSummary'
 
 import './index.css'
 
@@ -39,19 +40,7 @@ const Cart = () => (
                   Remove All
                 </button>
                 <CartListView />
-                <div className="total-cart">
-                  <div>
-                    <h1 className="order-paragraph">
-                      Order Total: <span className="span"> Rs {total} /-</span>
-                    </h1>
-                    <p className="items-count">
-                      {cartList.length} items in cart
-                    </p>
-                    <button type="button" className="checkout-button">
-                      Checkout
-                    </button>
-                  </div>
-                </div>
+                <CartSummary />
               </div>
             )}
           </div>
